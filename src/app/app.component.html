@@ -1,3 +1,31 @@
-<h1>
-  {{title}}
-</h1>
+<ul id="dropdown1" class="dropdown-content">
+   <li><a routerLink="/crear-receta">Agregar Receta</a></li>
+  <li class="divider"></li>
+  <li><a (click)='cerrar()'>Cerrar Sesión</a></li>
+
+</ul>
+
+<nav class=" teal lighten-1 ">
+  <div class="nav-background ">
+    <ul class="left hide-on-med-and-down">
+      <li><a routerLink="/acerca-nosotros" routerLinkActive="active" class='titulo brand-logo' style="color: white">NO TE COMAS AL PLANETA</a></li>
+    </ul>
+    <ul class="right hide-on-med-and-down">
+      <li><a routerLink="/inicio">Inicio </a></li>
+      <li><a routerLink="/acerca-nosotros">Acerca de </a></li>
+      <li><a routerLink="/conocenos">Conocenos</a></li>
+      <li class="divider"></li>
+      <li><a routerLink="/contactanos">Contactanos</a></li>
+      <li><a routerLink="/calculadora">Calculadora</a></li>
+       <li><a routerLink="/crear-receta">Receta</a></li>
+      <li><a routerLink="/mapa-carne">Georeferenciado</a></li>
+    
+      <li *ngIf='estaLogueado'>
+        <a class="dropdown-button"  data-activates="dropdown1">{{usuario.nombre}}<i class="material-icons right">arrow_drop_down</i></a>
+      </li>
+
+    </ul>
+
+  </div>
+</nav>
+<router-outlet></router-outlet>

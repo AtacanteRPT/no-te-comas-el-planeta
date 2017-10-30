@@ -1,0 +1,37 @@
+<div class="container">
+
+  <h2 class="titulo"> Registrarse</h2>
+  <div class="row">
+    <form  [formGroup]="loginForm" (ngSubmit)="doLogin($event)"  class="col s12 white">
+      
+      <div class="row">
+        <div class=" input-field col s12">
+          <input formControlName="email" type="email" placeholder="tu email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class=" input-field col s12">
+          <input formControlName="nombre" type="text" placeholder="tu nombre" class="validate">
+          <label for="text">Nombre</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class=" input-field col s12">
+          <input formControlName="password" type="password" placeholder="tu password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class=" input-field col s12">
+          <button class="btn" type="submit">Registrarse</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+
+</div>

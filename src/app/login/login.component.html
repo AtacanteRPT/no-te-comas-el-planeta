@@ -1,0 +1,53 @@
+<div class="container">
+
+  <h2 class="titulo"> LOGEARSE</h2>
+
+  <div class="row">
+    <form [formGroup]="loginForm" (ngSubmit)="doLogin($event)" class="col s12 white">
+      <div class="row">
+        <div class="input-field col s12">
+          <input formControlName="email" type="email" placeholder="tu email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class=" input-field col s12">
+          <input formControlName="password" type="password" placeholder="tu password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div *ngIf='cargando' class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class=" input-field col s6">
+          <button class="btn" type="submit">Entrar</button>
+        </div>
+        <div class=" input-field col s6">
+          <button class="btn" (click)='goRegistro()'> Unete </button>
+        </div>
+
+      </div>
+    </form>
+
+    <div *ngIf='mensajeError' class="card red">
+      <p> Error en el email o usuario</p>
+    </div>
+
+
+  </div>
+
+
+
+</div>

@@ -1,0 +1,103 @@
+<div class="parallax-container">
+    <div class="parallax"><img src="assets/img/frutas1.jpg"></div>
+</div>
+
+<div class="section white">
+    <div class="row container">
+
+
+        <div class="row">
+            <div class="input-field col s6">
+                <nav class="indigo lighten-2" item-height="100" item-width="100">
+                    <h2 class="p">Nueva receta</h2>
+                </nav>
+            </div>
+            <div class="input-field col s6">
+                <nav class="#607d8b blue-grey" item-height="100" item-width="100">
+                    <h2></h2>
+                </nav>
+            </div>
+        </div>
+        <!--*****************************************************************************************-->
+
+        <!--#################################################################################-->
+        <form [formGroup]="loginForm" (ngSubmit)="enviarReceta($event)" class="col s12">
+            <div class="row">          
+                <div class="input-field col s6">
+                    <input formControlName="nombre" type="text" placeholder="nombre de la receta" class="validate">
+                    <label for="first_name" class="center">Nombre de la receta</label>
+                </div>
+                <div class="input-field col s3">
+                    <img src="https://i.ytimg.com/vi/chVW_ZE8AiY/maxresdefault.jpg" width="310" height="200">
+                </div>
+                <div class="input-field col s3">
+                    <img src="assets/img/bebidaZ.jpg" width="310" height="200">
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">mode_edit</i>
+                    <textarea formControlName="ingredientes" type="text" placeholder="tus ingredientes" class="materialize-textarea"></textarea>
+                    <label for="icon_prefix2">Ingredientes</label>
+                </div>
+                <div class="input-field col s3">
+                    <img src="assets/img/sandwich.jpg" width="310" height="200">
+                </div>
+                <div class="input-field col s3">
+                    <img src="assets/img/cereza.jpg" width="310" height="200">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">mode_edit</i>
+                    <textarea formControlName="preparacion" type="text" placeholder="forma de preparla" class="materialize-textarea"></textarea>
+                    <label for="icon_prefix2">Preparacion</label>
+                </div>
+                <div class="input-field col s3">
+                    <img src="assets/img/plato1.jpg" width="310" height="200">
+                </div>
+                <div class="input-field col s3">
+                    <img src="assets/img/patatas-revolconas.jpg" width="310" height="200">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s6">
+                    <div class="file-field input-field ">
+                        <div class="btn">
+                            <span>File</span>
+                            <input type="file" multiple>
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s5">
+
+                </div>
+                <div class="input-field col s5">
+                    <button type="submit" class="btn waves-effect waves-purple">
+                            <i class="material-icons left">done</i> Send</button>
+                    <a href="#!" class="btn waves-effect waves-purple">atras</a>
+
+                </div>
+
+            </div>
+        </form>
+
+    
+        <!--ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+    </div>
+</div>
+
+
+<div class="parallax-container">
+    <div class="parallax"><img src="assets/img/frutas2.jpg"></div>
+</div>

@@ -1,0 +1,190 @@
+<div class="card grey lighten-3">
+  <ul id="tabs-swipe-demo" class="tabs">
+    <li class="tab col s3"><a href="#test-swipe-1">Calculadora</a></li>
+    <li class="tab col s3"><a href="#test-swipe-2">Alternativas</a></li>
+    <!--<li class="tab col s3"><a href="#test-swipe-3">Test 3</a></li>-->
+  </ul>
+
+  <div id="test-swipe-1" class="col s12 white">
+    <div class="row">
+
+      <!--<div class="col s4 m3">
+      <h3> Calculadora</h3>
+      <div class="row">
+        <div class="col s6">
+          <a href="#test1"><img id='img' src="../assets/img/res.jpg"/></a>
+        </div>
+        <div class="col s6 "><img id='img' src="../assets/img/cerdo.jpg"/></div>
+      </div>
+
+      <div class="row">
+        <div class="col s6"><img id='img' src="../assets/img/pollo.jpg"/></div>
+        <div class="col s6 "><img id='img' src="../assets/img/pescado.jpg" /></div>
+
+      </div>
+      <div class="row">
+        <div class="col s6"><img id='img' src="../assets/img/cordero.jpg" /></div>
+        <div class="col s6 "><img id='img' src="../assets/img/pescado.jpg" /></div>
+      </div>
+    </div>-->
+
+
+
+
+      <div class="card-panel green darken-1 col s6 white-text text-darken-2">
+        <h5 class="center"><br> Escoge que tipo de carne<br> estas<br> consumiendo</h5>
+      </div>
+      <form action="#">
+
+
+        <div class="row card-panel teal lighten-5 col  s6">
+
+          <br>
+          <div class="col s3"><img id="img" src="../assets/img/res.jpg" height="80" width="80">
+            <div>
+              <input class="with-gap" id="test1" name="group1" type="radio" (change)="onChange('res')">
+              <label for="test1">Res</label>
+
+            </div>
+          </div>
+
+          <div class="col s3"><img id="img" src="../assets/img/pollo.jpg" height="80" width="80">
+            <div>
+              <input class="with-gap" id="test2" name="group1" type="radio" (change)="onChange('pollo')">
+              <label for="test2">Pollo</label>
+
+            </div>
+          </div>
+
+          <div class="col s3"><img id="img" src="../assets/img/cordero.jpg " height="80" width="80">
+            <div>
+              <input class="with-gap" id="test3" name="group1" type="radio" (change)="onChange('cordero')">
+              <label for="test3">Cordero</label>
+            </div>
+          </div>
+
+          <div class="col s3"><img id="img" src="../assets/img/cerdo.jpg" height="80" width="80">
+            <div>
+
+              <input class="with-gap" id="test4" name="group1" type="radio" (change)="onChange('cerdo')">
+              <label for="test4">Cerdo</label>
+
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="row">
+
+
+        <div class="card-panel green darken-2 col s6 white-text text-darken-2">
+          <h5 class="center"><br> Gradua la barra para<br> detallar cuanta<br> carne estas consumiendo </h5>
+        </div>
+
+        <p> La Porcion en Gramos (gr)</p>
+
+        <form action="#" class="col s6">
+          <p class="range-field ">
+
+            <input id="test5" type="range" min="0" max="1000" #ref (change)="cambioRango(ref.value)">
+
+          </p>
+        </form>
+
+
+
+      </div>
+      <div class="row card-panel green darken-3 col s6 white-text text-darken-2">
+        <h5 class="center"> <br> <br> Los resultados que te presentamos a continuacion <br> hacen referencia a los recursos <br> que se utilizaron
+          para producir dicha <br> cantidad de carne :v <br> <br> <br> <br> </h5>
+      </div>
+
+
+      <div class="col s6 m6">
+
+        <!--************************************** IMPACTO *******************************************-->
+        <ul class="collection">
+
+          <li class="collection-item avatar z-depth-2">
+            <img class="circle" src="../assets/img/agua.jpg" alt>
+            <span class="title">
+              <p>Al consumir {{valor}} gramos de {{animal}} se empleo {{agua}} litros de agua!</p></span>
+
+            <div>
+            <a class="secondary-content" routerLink="/res">Por Que?</a>
+
+            </div>
+
+          </li>
+          <li class="collection-item avatar">
+            <img class="circle" src="../assets/img/tierra.jpg" alt>
+            <span class="title">Para la crianza y alimentacion de este animal fueron empleados {{tierra}} km cuadrados de tierra</span>
+   <div>
+            <a class="secondary-content" routerLink="/pollo">Por Que?</a>
+
+            </div>
+
+          </li>
+          <li class="collection-item avatar">
+            <img class="circle" src="../assets/img/gas.png" alt>
+            <span class="title">Segun estudios acerca de la contaminacion del medio ambiente el {{animal}} segun los {{valor}} gramos consumidos,afecto al medio ambiente con la emision de {{metano}} metros cubicos de metano</span>
+   <div>
+            <a class="secondary-content" routerLink="/cerdo">Por Que?</a>
+
+            </div>
+
+          </li>
+        </ul>
+
+      </div>
+
+
+
+    </div>
+  </div>
+
+
+
+
+  <div id="test-swipe-2" class="col s12 white">
+
+    <div class="col m7 s12">
+      <br>
+      <h5 class="header center-align">Busca alternativas con Respecto al Consumo Execivo de Carne</h5>
+
+      <div class="row">
+        <div class="container">
+          <div>
+            <div *ngFor="let alternativa of alternativas" class="col m4">
+              <div class="card horizontal">
+                <div class="card-image">
+                  <img src="../assets/img/pollo.jpg">
+                </div>
+                <div class="card-stacked">
+                  <div class="card-content">
+                    <p>{{alternativa.nombre}}</p>
+                    <div class="chip">
+                      <img src="../assets/img/yuna.jpg" alt="Contact Person"> {{alternativa.usuario.nombre}} {{alternativa.usuario.email}}
+                    </div>
+                  </div>
+                  <div class="card-action">
+                    <button class="btn" (click)="goReceta(alternativa)">Ver receta</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+  <!--<div id="test-swipe-3" class="col s12 green">Test 3</div>-->
+
+</div>
+
+<app-footer> </app-footer>

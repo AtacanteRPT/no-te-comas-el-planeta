@@ -19,20 +19,29 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "../node_modules/materialize-css/dist/css/materialize.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.js",
+        "../node_modules/hammerjs/hammer.js",
+        "../node_modules/materialize-css/dist/js/materialize.js",
+        "../src/assets/init.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
       }
+
     }
+
   ],
   "e2e": {
     "protractor": {
       "config": "./protractor.conf.js"
     }
+
   },
   "lint": [
     {
@@ -44,14 +53,18 @@
     {
       "project": "e2e/tsconfig.e2e.json"
     }
+
   ],
   "test": {
     "karma": {
       "config": "./karma.conf.js"
     }
+
   },
   "defaults": {
     "styleExt": "css",
     "component": {}
+
   }
+
 }
